@@ -26,7 +26,6 @@ defmodule ExAws.Operation.S3 do
       http_method = operation.http_method
 
       url = operation
-      |> add_bucket_to_path
       |> add_resource_to_params
       |> ExAws.Request.Url.build(config)
 
